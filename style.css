@@ -56,8 +56,8 @@ button,
 input[type='button'],
 input[type='reset'],
 input[type='submit'] {
-	background-color: #c3bf80;
-	border: 0.1rem solid #c3bf80;
+	background-color: #b6c23d;
+	border: 0.1rem solid #b6c23d;
 	border-radius: .4rem;
 	color: #fff;
 	cursor: pointer;
@@ -107,8 +107,8 @@ input[type='reset'][disabled]:focus,
 input[type='reset'][disabled]:hover,
 input[type='submit'][disabled]:focus,
 input[type='submit'][disabled]:hover {
-	background-color: #c3bf80;
-	border-color: #c3bf80;
+	background-color: #b6c23d;
+	border-color: #b6c23d;
 }
 
 .button.button-outline,
@@ -117,7 +117,7 @@ input[type='button'].button-outline,
 input[type='reset'].button-outline,
 input[type='submit'].button-outline {
 	background-color: transparent;
-	color: #c3bf80;
+	color: #b6c23d;
 }
 
 .button.button-outline:focus, .button.button-outline:hover,
@@ -144,7 +144,7 @@ input[type='reset'].button-outline[disabled]:hover,
 input[type='submit'].button-outline[disabled]:focus,
 input[type='submit'].button-outline[disabled]:hover {
 	border-color: inherit;
-	color: #c3bf80;
+	color: #b6c23d;
 }
 
 .button.button-clear,
@@ -154,7 +154,7 @@ input[type='reset'].button-clear,
 input[type='submit'].button-clear {
 	background-color: transparent;
 	border-color: transparent;
-	color: #c3bf80;
+	color: #b6c23d;
 }
 
 .button.button-clear:focus, .button.button-clear:hover,
@@ -180,7 +180,7 @@ input[type='reset'].button-clear[disabled]:focus,
 input[type='reset'].button-clear[disabled]:hover,
 input[type='submit'].button-clear[disabled]:focus,
 input[type='submit'].button-clear[disabled]:hover {
-	color: #c3bf80;
+	color: #b6c23d;
 }
 
 code {
@@ -194,7 +194,7 @@ code {
 
 pre {
 	background: #f4f5f6;
-	border-left: 0.3rem solid #c3bf80;
+	border-left: 0.3rem solid #b6c23d;
 	overflow-y: hidden;
 }
 
@@ -254,7 +254,7 @@ input[type='week']:focus,
 input:not([type]):focus,
 textarea:focus,
 select:focus {
-	border-color: #c3bf80;
+	border-color: #b6c23d;
 	outline: 0;
 }
 
@@ -264,7 +264,7 @@ select {
 }
 
 select:focus {
-	background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 8" width="30"><path fill="%23c3bf80" d="M0,0l6,8l6-8"/></svg>');
+	background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 8" width="30"><path fill="%23b6c23d" d="M0,0l6,8l6-8"/></svg>');
 }
 
 select[multiple] {
@@ -479,7 +479,7 @@ input[type='radio'] {
 }
 
 a {
-	color: #c3bf80;
+	color: #b6c23d;
 	text-decoration: none;
 }
 
@@ -654,16 +654,33 @@ img {
 	font-size: 1.4em;
 }
 
-.site-title {
-	font-weight: 500;
-	font-weight: bold;
-	font-size: 6em;
+.site-header {
+	background-color: #12322f;
+	background-image: url(img/red3D_c.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 36px;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: left;
+}
+
+.site-header .site-title {
+	font-weight: 300;
+	font-size: 3em;
 	text-transform: uppercase;
 	text-align: center;
 	line-height: 0.9em;
 	margin-bottom: 0;
+	max-width: 750px;
+	color: #000;
+	text-shadow: 0px 20px 10px #b6c23d;
+}
+
+.site-header #timing {
 	color: white;
-	text-shadow: 1px 1px 3px #c3bf80;
 }
 
 .presentation {
@@ -672,8 +689,8 @@ img {
 
 .section {
 	padding: 24px;
-	border-top: 1px solid #c3bf80;
-	border-bottom: 1px solid #c3bf80;
+	border-top: 1px solid #b6c23d;
+	border-bottom: 1px solid #b6c23d;
 }
 
 .section.intro-text {
@@ -681,13 +698,13 @@ img {
 	color: #333;
 }
 
-.site-header {
-	background-color: #eeecda;
-	padding: 36px;
-}
-
-h1.institutos-header {
-	text-align: center;
+h1.section-header {
+	text-align: right;
+	text-transform: lowercase;
+	margin: 0;
+	background-color: #b6c23d;
+	color: #000;
+	padding: 24px;
 }
 
 .section.agenda h2 {
@@ -702,6 +719,7 @@ h1.institutos-header {
 .section.instituto {
 	margin: 0 auto;
 	position: relative;
+	min-height: 700px;
 }
 
 .section.instituto .number {
@@ -712,14 +730,20 @@ h1.institutos-header {
 	font-size: 20em;
 	font-weight: 500;
 	opacity: 0.5;
-	text-shadow: 2px 2px 0 #333;
+	text-shadow: 2px 10px 20px #333;
 }
 
 .section.instituto h2 {
-	font-size: 2em;
-	font-weight: 500;
+	font-weight: 300;
 	padding: 0 20px;
-	transform: rotate(-70deg);
+	text-transform: uppercase;
+	text-shadow: 0 20px 10px #606c76;
+}
+
+.section.instituto .instituto-content {
+	background-color: #606c76;
+	color: white;
+	padding: 24px;
 }
 
 /* Larger than mobile screen */
@@ -733,11 +757,18 @@ h1.institutos-header {
 		display: flex;
 		padding: 120px;
 	}
-	.section.instituto h1 {
-		width: 30%;
+	.section.instituto h2 {
+		width: 60%;
+		font-size: 4em;
 	}
 	.section.instituto .instituto-content {
-		width: 70%;
+		width: 40%;
+	}
+	.site-header .site-title {
+		font-size: 6em;
+	}
+	.section.agenda .agenda-content {
+		font-size: 1.6em;
 	}
 }
 

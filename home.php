@@ -29,19 +29,22 @@ $agenda = get_post(26);
 		</div>
 	</div>
 
+	<h1 class="section-header">Agenda</h1>
 	<section class="section agenda">
-		<h2>Agenda</h2>
+		
 		<div class="agenda-content">
 			<?php echo apply_filters('the_content', $agenda->post_content);?>
 		</div>
 	</section>
 
-	<h1 class="institutos-header">Institutos</h1>
+	<h1 class="section-header">Institutos</h1>
 
-	<?php foreach($institutos as $instituto):?>
+	<?php foreach($institutos as $instituto):
+		$curinst = $kinst++;
+		?>
 
-		<section class="section instituto">
-			<span class="number"><?php echo $kinst++;?></span>
+		<section class="section instituto" id="instituto-<?php echo $curinst;?>">
+			<span class="number"><?php echo $curinst;?></span>
 			<h2><?php echo $instituto->post_title;?></h2>
 
 			<div class="instituto-content">
