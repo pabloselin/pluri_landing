@@ -140,6 +140,7 @@ add_action( 'widgets_init', 'pluri_landing_widgets_init' );
 function pluri_landing_scripts() {
 	wp_enqueue_style( 'pluri_landing-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'pluri_landing-style', 'rtl', 'replace' );
+	wp_dequeue_style( 'wp-block-library' );
 }
 add_action( 'wp_enqueue_scripts', 'pluri_landing_scripts' );
 

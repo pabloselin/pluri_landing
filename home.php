@@ -21,7 +21,7 @@ $agenda = get_post(26);
 ?>
 
 <main id="primary" class="site-main">
-	<div class="section intro-text">
+	<div class="section intro-text" id="intro">
 		<div class="row">
 			<div class="large-text presentation">
 				<?php echo apply_filters('the_content', $defo->post_content);?>
@@ -55,7 +55,23 @@ $agenda = get_post(26);
 	<?php endforeach;?>
 
 </main><!-- #main -->
-
+<nav id="fixed-nav">
+	<ul>
+		<li>
+			<a href="#intro">intro</a>
+		</li>
+		<span>institutos</span>
+	<?php 
+		$navk = 1;
+		foreach($institutos as $instituto): 
+			$navinst = $navk++;
+			?>
+			<li>
+				<a title="<?php echo $instituto->post_title;?>" href="#instituto-<?php echo $navinst;?>"><?php echo $navinst;?></a>
+			</li>
+		<?php endforeach;?>
+	</ul>
+</nav>
 <?php
 
 get_footer();

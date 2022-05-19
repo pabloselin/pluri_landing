@@ -27,6 +27,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 html {
 	box-sizing: border-box;
 	font-size: 62.5%;
+	scroll-behavior: smooth;
 }
 
 body {
@@ -744,6 +745,44 @@ h1.section-header {
 	background-color: #606c76;
 	color: white;
 	padding: 24px;
+}
+
+#fixed-nav {
+	position: fixed;
+	bottom: 0;
+	border: 1px solid #b6c23d;
+}
+
+#fixed-nav ul {
+	display: flex;
+	margin: 0;
+}
+
+#fixed-nav ul span {
+	display: block;
+	padding: 12px;
+	color: white;
+	background-color: #606c76;
+	text-transform: lowercase;
+}
+
+#fixed-nav ul li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#fixed-nav ul li a {
+	display: block;
+	padding: 12px;
+	border-right: 1px solid #b6c23d;
+	color: #333;
+	background-color: white;
+}
+
+#fixed-nav ul li a:hover {
+	background-color: #b6c23d;
+	color: white;
 }
 
 /* Larger than mobile screen */

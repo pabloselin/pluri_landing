@@ -50,6 +50,7 @@ $color-quinary: #e1e1e1 !default;
 html {
 	box-sizing: border-box;
 	font-size: 62.5%;
+	scroll-behavior: smooth;
 }
 
 // Default body styles
@@ -159,6 +160,8 @@ h1.section-header {
 	margin: 0 auto;
 	position: relative;
 	min-height: 700px;
+	// background: url(img/red3D_d.jpg) no-repeat;
+	// background-size: cover;
 	.number {
 		position: absolute;
 		top: 10%;
@@ -182,6 +185,39 @@ h1.section-header {
 		background-color: $color-secondary;
 		color: white;
 		padding: 24px;
+	}
+}
+
+#fixed-nav {
+	position: fixed;
+	bottom: 0;
+	border: 1px solid $color-primary;
+	ul {
+		display: flex;
+		margin: 0;
+		span {
+			display: block;
+			padding: 12px;
+			color: white;
+			background-color: $color-secondary;
+			text-transform: lowercase;
+		}
+		li {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			a {
+				display: block;
+				padding: 12px;
+				border-right: 1px solid $color-primary;
+				color: #333;
+				background-color: white;
+				&:hover {
+					background-color: $color-primary;
+					color: white;
+				}
+			}
+		}
 	}
 }
 
