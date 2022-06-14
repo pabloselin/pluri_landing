@@ -25,11 +25,6 @@
 <div id="page" class="site">
 	<header id="masthead" class="site-header">
 		<h1 class="site-title align-center"><?php bloginfo('name');?></h1>
-		<div class="augsquare">
-			<span id="timing"></span>
-		</div>
+		
 	</header><!-- #masthead -->
-	<script>
-		const timing = document.getElementById("timing");
-		timing.innerText = parseFloat(window.performance.timing.responseEnd);
-	</script>
+	

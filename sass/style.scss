@@ -30,8 +30,8 @@ $systemMonospace: "SF Mono", "Monaco", "Inconsolata", "Fira Mono",
 
 $color-initial: #fff !default;
 $color-primary: #1b998b !default;
-$color-secondary: #c5d86d !default;
-$color-tertiary: #d7263d !default;
+$color-secondary: desaturate(#04fe9d, 25%) !default;
+$color-tertiary: desaturate(#f10cb3, 25%) !default;
 $color-quaternary: #2e294e !default;
 $color-quinary: #f46036 !default;
 
@@ -99,18 +99,18 @@ body {
 	background-repeat: no-repeat;
 	background-size: cover;
 	padding: 36px;
-	height: 300px;
+	height: 450px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: left;
 	.site-title {
-		font-weight: 900;
+		font-weight: 400;
 		font-size: 3em;
 		//max-width: 800px;
 		text-transform: uppercase;
 		text-align: center;
-		line-height: 0.9em;
+		line-height: 1.5em;
 		margin-bottom: 0;
 		max-width: 750px;
 		color: #000;
@@ -124,6 +124,29 @@ body {
 
 .presentation {
 	font-weight: 400;
+	font-size: 18px;
+	max-width: 600px;
+}
+
+.section.intro-text {
+	.row {
+		max-width: 1200px;
+		margin: 0 auto;
+
+		.institutos-home {
+			padding: 12px;
+			h3 {
+				color: white;
+				font-weight: bold;
+				letter-spacing: auto;
+			}
+			a {
+				display: block;
+				margin-bottom: 6px;
+				font-weight: bold;
+			}
+		}
+	}
 }
 
 .section {
@@ -155,14 +178,23 @@ h1.section-header {
 	.agenda-content {
 		max-width: 960px;
 		margin: 12px auto;
+		color: $color-primary;
+		a {
+			color: $color-primary;
+		}
 	}
 }
 
 .section.instituto {
-	margin: 0 auto;
-	position: relative;
-	min-height: 700px;
 	background-color: $color-tertiary;
+	.section-wrap {
+		margin: 0 auto;
+		position: relative;
+		min-height: 700px;
+		display: flex;
+		max-width: 1200px;
+	}
+
 	// background: url(img/red3D_d.jpg) no-repeat;
 	// background-size: cover;
 	.number {
@@ -181,7 +213,7 @@ h1.section-header {
 		padding: 0 20px;
 		text-transform: uppercase;
 		color: darken($color-tertiary, 30%);
-		text-shadow: 0 20px 10px $color-secondary;
+		//text-shadow: 0 20px 10px $color-secondary;
 		//transform: rotate(-70deg);
 	}
 
@@ -236,7 +268,7 @@ h1.section-header {
 /* Larger than tablet screen */
 @media (min-width: 80rem) {
 	.presentation {
-		max-width: 960px;
+		max-width: 600px;
 		margin: 0 auto;
 		color: white;
 	}
@@ -267,4 +299,12 @@ h1.section-header {
 
 /* Larger than desktop screen */
 @media (min-width: 120rem) {
+}
+
+footer.site-footer {
+	background-color: $color-secondary;
+	color: white;
+	padding: 24px;
+	text-align: center;
+	font-size: 18px;
 }

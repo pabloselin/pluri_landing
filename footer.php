@@ -11,12 +11,22 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+<footer id="colophon" class="site-footer">
+  <div class="site-info">
+     <p>Este proyecto cuenta con el apoyo de Fundación Daniel y Nina Carasso</p>
+     <p>
+        <div class="augsquare">
+            <span id="timing"></span>
+        </div>
+    </p>
+</div><!-- .site-info -->
+</footer><!-- #colophon -->
 </div><!-- #page -->
+    
+    <script>
+        const timing = document.getElementById("timing");
+        timing.innerText = "esta página ha tardado " + (parseFloat(window.performance.timing.responseEnd) * 0.0000001) + " milisegundos en generarse en el navegador";
+    </script>
 
 <?php wp_footer(); ?>
 
