@@ -25,7 +25,7 @@
     
     <script>
         const timing = document.getElementById("timing");
-        timing.innerText = "esta página ha tardado " + (parseFloat(window.performance.timing.responseEnd) * 0.0000001) + " milisegundos en generarse en el navegador";
+        timing.innerText = "esta página ha tardado " + (parseFloat(window.performance.timing.responseEnd) * 0.00000001) + " milisegundos en generarse en el navegador";
     </script>
 
 <?php wp_footer(); ?>
