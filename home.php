@@ -58,7 +58,7 @@ $agenda = get_post(26);
 <nav id="fixed-nav">
 	<ul>
 		<li>
-			<a href="#intro">intro</a>
+			<a href="#intro">0</a>
 		</li>
 		<span>institutos</span>
 	<?php 
