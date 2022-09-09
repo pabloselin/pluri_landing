@@ -52,7 +52,7 @@ $agenda = get_post(26);
 		$curinst = $kinst++;
 		?>
 
-		<section class="section instituto" id="<?php echo $instituto->post_name;?>">
+		<section class="section instituto instituto-<?php echo ($curinst % 2 == 0 ? 'even' : 'odd');?>" id="<?php echo $instituto->post_name;?>">
 			<div class="section-wrap">
 				
 				<h2><?php echo $instituto->post_title;?></h2>

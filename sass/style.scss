@@ -29,10 +29,10 @@ $systemMonospace: "SF Mono", "Monaco", "Inconsolata", "Fira Mono",
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
 $color-initial: #fff !default;
-$color-primary: #1b998b !default;
-$color-secondary: desaturate(#04fe9d, 25%) !default;
-$color-tertiary: desaturate(#f10cb3, 25%) !default;
-$color-quaternary: #2e294e !default;
+$color-primary: #555 !default;
+$color-secondary: #ccc !default;
+$color-tertiary: #333 !default;
+$color-quaternary: #f0f0f0 !default;
 $color-quinary: #f46036 !default;
 
 // Base
@@ -136,7 +136,7 @@ body {
 		.institutos-home {
 			padding: 12px;
 			h3 {
-				color: white;
+				color: $color-primary;
 				font-weight: bold;
 				letter-spacing: auto;
 			}
@@ -187,6 +187,9 @@ h1.section-header {
 
 .section.instituto {
 	background-color: $color-tertiary;
+	&.instituto-odd {
+		background-color: lighten($color-tertiary, 10%);
+	}
 	.section-wrap {
 		margin: 0 auto;
 		position: relative;
@@ -212,17 +215,17 @@ h1.section-header {
 		font-weight: 700;
 		padding: 0 20px;
 		text-transform: uppercase;
-		color: darken($color-tertiary, 30%);
+		color: $color-quinary;
 		//text-shadow: 0 20px 10px $color-secondary;
 		//transform: rotate(-70deg);
 	}
 
 	.instituto-content {
 		background-color: $color-secondary;
-		color: $color-quaternary;
+		color: $color-primary;
 		padding: 24px;
 		font-size: 18px;
-		border: 4px solid darken($color-tertiary, 20%);
+		border: 1px solid darken($color-tertiary, 20%);
 	}
 }
 
@@ -270,7 +273,7 @@ h1.section-header {
 	.presentation {
 		max-width: 600px;
 		margin: 0 auto;
-		color: white;
+		color: $color-primary;
 	}
 
 	.section.instituto {
