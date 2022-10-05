@@ -1,0 +1,7 @@
+.entry-content img {
+  max-width: 100%;
+  height: auto; }
+
+@media screen and (max-width: 768px) {
+  main article {
+    padding: 12px; } }
