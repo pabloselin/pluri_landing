@@ -23,8 +23,11 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
+	<nav id="main-menu">
+		<?php wp_nav_menu(array('theme_location' => 'menu-1'));?>
+	</nav>	
 	<header id="masthead" class="site-header">
-		<h1 class="site-title align-center"><?php bloginfo('name');?></h1>
-		
+		<h1 class="site-title align-center"><img class="main-logo" src="<?php bloginfo('template_url');?>/img/plurilogo_text.svg" alt="<?php bloginfo('title');?>"></h1>
+	
 	</header><!-- #masthead -->
 	

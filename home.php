@@ -11,7 +11,8 @@ $institutos = get_children(
 					array(
 						'post_parent' 	=> 8,
 						'orderby'		=> 'menu_order',
-						'order'			=> 'ASC'
+						'order'			=> 'ASC',
+						'post_type'		=> 'page'
 						)
 					);
 $kinst = 1;
